@@ -62,7 +62,7 @@ open("metrics.txt", "w", encoding="utf-8").close()
 
 def train_model(X_tr, y_tr, plot_name, class_weight=None):
     clf = RandomForestClassifier(
-        n_estimators=300, max_depth=10,
+        n_estimators=300, max_depth=6,
         random_state=SEED, class_weight=class_weight
     )
     clf.fit(X_tr, y_tr)
